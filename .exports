@@ -1,5 +1,5 @@
 # Make vim the default editor.
-export EDITOR='vim';
+export EDITOR=/usr/local/bin/atom;
 
 # Enable persistent REPL history for `node`.
 NODE_REPL_HISTORY_FILE=~/.node_history;
@@ -24,3 +24,12 @@ export MANPAGER='less -X';
 
 # Always enable colored `grep` output.
 export GREP_OPTIONS='--color=auto';
+
+# Asbjørn Ulsberg's old and custom exports
+export PATH="/usr/local/opt/ruby/bin:/usr/local/bin:/usr/local/sbin:/opt/local/bin:/opt/local/sbin:/usr/bin:$PATH";
+export MANPATH=/opt/local/share/man:$MANPATH;
+export CLICOLOR=1;
+export LSCOLORS=gxfxcxdxbxaxhdxxbhgaga;
+export SVN_EDITOR=/usr/local/bin/atom;
+export HISTCONTROL=erasedups;
+export HISTSIZE=10000;
