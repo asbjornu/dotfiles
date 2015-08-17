@@ -244,3 +244,10 @@ function o() {
 function tre() {
 	tree -aC -I '.git|node_modules|bower_components' --dirsfirst "$@" | less -FRNX;
 }
+
+# Synchronises the local time with the first registered NTP server.
+function ntpsync() {
+	local ntpserver=$(sudo systemsetup -getnetworktimeserver|awk '{print $4}');
+	echo "Synchronising local time against <$ntpserver>"
+	sudo ntpdate -u $ntpserver;
+}
