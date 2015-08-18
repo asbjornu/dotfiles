@@ -143,3 +143,8 @@ alias reload="exec $SHELL -l"
 # To avoid the 'GREP_OPTIONS is deprecated; please use an alias or script' warning
 alias grep="/usr/local/bin/grep $GREP_OPTIONS"
 unset GREP_OPTIONS
+
+# Add thefuck alias
+command -v thefuck >/dev/null 2>&1 && {
+    eval "$(thefuck --alias)"
+}
