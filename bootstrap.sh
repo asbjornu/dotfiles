@@ -16,6 +16,13 @@ function doIt() {
     source ~/.bash_profile;
 }
 
+if [ ! -f .extra ]; then
+    echo ''
+    echo "Warning! No .extra file found. This may lead to anonymous Git commits and other problems."
+    echo "If you want to avoid these problems, please add an .extra file as described in the README."
+    echo ''
+fi
+
 if [ "$1" == "--force" -o "$1" == "-f" ]; then
     doIt;
 else
