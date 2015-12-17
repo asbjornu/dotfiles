@@ -251,3 +251,6 @@ function ntpsync() {
 	echo "Synchronising local time against <$ntpserver>"
 	sudo ntpdate -u $ntpserver;
 }
+
+# define md
+md () { mkdir -p "$@" && cd "$@"; }
