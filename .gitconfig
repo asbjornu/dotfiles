@@ -129,8 +129,8 @@
 
 [commit]
 
-	# https://help.github.com/articles/signing-commits-using-gpg/
-	gpgsign = true
+    # https://help.github.com/articles/signing-commits-using-gpg/
+    gpgsign = true
 
 [diff]
 
@@ -181,3 +181,8 @@
 [url "git://gist.github.com/"]
 
     insteadOf = "gist:"
+
+[user]
+
+    email = asbjorn@ulsberg.no
+    name = Asbjørn Ulsberg
