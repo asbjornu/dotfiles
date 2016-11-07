@@ -144,6 +144,7 @@
     renames = copies
 
 [diff "bin"]
+
     # Use `hexdump` to diff binary files
     textconv = hexdump -v -C
 
