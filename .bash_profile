@@ -58,3 +58,8 @@ complete -W "NSGlobalDomain" defaults;
 
 # Add `killall` tab completion for common apps
 complete -o "nospace" -W "Contacts Calendar Dock Finder Mail Safari iTunes SystemUIServer Terminal Twitter" killall;
+
+# Source NVM
+if which brew > /dev/null && [ -f `brew --prefix`/opt/nvm/nvm.sh ]; then
+    source `brew --prefix`/opt/nvm/nvm.sh
+fi;
