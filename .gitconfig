@@ -107,6 +107,7 @@
     # Use Atom as the default editor
     editor = "atom --wait"
     autocrlf = input
+	quotepath = off
 
 [color]
 
