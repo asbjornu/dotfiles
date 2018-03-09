@@ -168,3 +168,5 @@ command -v thefuck >/dev/null 2>&1 && {
 alias uuid="uuidgen | tr -d - | tr -d '\n' | tr '[:upper:]' '[:lower:]'  | pbcopy && pbpaste && echo"
 
 alias shrug="echo '¯\_(ツ)_/¯' | pbcopy && pbpaste && echo"
+
+alias gv="gitversion | pjson"
