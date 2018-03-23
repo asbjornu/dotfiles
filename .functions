@@ -254,7 +254,7 @@ function ai2svg() {
   local svg
   for d in *.ai; do
     d=$(echo "$(cd "$(dirname "$d")"; pwd)/$(basename "$d")")
-    svg=$(echo "$d" | sed 's/.ai/.svg/')
+    svg="${d%ai}svg"
     echo "Creating $svg ..."
     inkscape --export-area-drawing --file "$d" --export-plain-svg "$svg"
 	svgcleaner $svg $svg
