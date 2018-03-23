@@ -228,10 +228,11 @@ function md () {
 	 mkdir -p "$@" && cd "$@";
 }
 
+
+# generate absolute path from relative path
+# $1     : relative filename
+# return : absolute path
 function abspath() {
-    # generate absolute path from relative path
-    # $1     : relative filename
-    # return : absolute path
     if [ -d "$1" ]; then
         # dir
         (cd "$1"; pwd)
@@ -245,4 +246,17 @@ function abspath() {
             echo "$(pwd)/$1"
         fi
     fi
+}
+
+# Converts AI files to SVG
+function ai2svg() {
+  local d
+  local svg
+  for d in *.ai; do
+    d=$(echo "$(cd "$(dirname "$d")"; pwd)/$(basename "$d")")
+    svg=$(echo "$d" | sed 's/.ai/.svg/')
+    echo "Creating $svg ..."
+    inkscape --export-area-drawing --file "$d" --export-plain-svg "$svg"
+	svgcleaner $svg $svg
+  done
 }
