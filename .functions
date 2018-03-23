@@ -224,4 +224,6 @@ function ntpsync() {
 }
 
 # define md
-md () { mkdir -p "$@" && cd "$@"; }
+function md () {
+	 mkdir -p "$@" && cd "$@";
+}
