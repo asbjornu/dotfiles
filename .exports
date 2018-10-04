@@ -37,7 +37,7 @@ export GPG_TTY=$(tty);
 export GREP_OPTIONS='--color=auto';
 
 # Asbjørn Ulsberg's old and custom exports
-export PATH="/usr/local/opt/ruby/bin:/usr/local/bin:/usr/local/sbin:/opt/local/bin:/opt/local/sbin:/usr/bin:/Library/TeX/texbin:$PATH";
+export PATH="~/Library/Python/2.7/bin:/usr/local/opt/ruby/bin:/usr/local/bin:/usr/local/sbin:/opt/local/bin:/opt/local/sbin:/usr/bin:/Library/TeX/texbin:$PATH";
 export MANPATH=/opt/local/share/man:$MANPATH;
 export CLICOLOR=1;
 export LSCOLORS=gxfxcxdxbxaxhdxxbhgaga;
