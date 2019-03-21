@@ -56,3 +56,6 @@ export NVM_DIR="$HOME/.nvm"
 export PATH="/usr/local/opt/openssl/bin:$PATH"
 export LDFLAGS="-L/usr/local/opt/openssl/lib"
 export CPPFLAGS="-I/usr/local/opt/openssl/include"
+
+# Grep
+export PATH="/usr/local/opt/grep/libexec/gnubin:$PATH"
