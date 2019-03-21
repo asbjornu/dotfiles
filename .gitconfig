@@ -206,5 +206,5 @@
 
 [gpg]
 
-    # Use gpg2 as the GPG program
-    program = gpg2
+    # Use gpg as the GPG program
+    program = gpg
