@@ -59,3 +59,7 @@ export CPPFLAGS="-I/usr/local/opt/openssl/include"
 
 # Grep
 export PATH="/usr/local/opt/grep/libexec/gnubin:$PATH"
+
+# Go
+export GOPATH="$HOME/go"
+export PATH="$GOPATH/bin:$PATH"
