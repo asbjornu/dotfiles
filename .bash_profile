@@ -46,7 +46,7 @@ fi;
 
 # Source RVM if it exists
 if which brew &> /dev/null && [ -f "~/.rvm/scripts/rvm" ]; then
-    source /Users/bitbear/.rvm/scripts/rvm
+    source ~/.rvm/scripts/rvm
 fi;
 
 # Add tab completion for SSH hostnames based on ~/.ssh/config, ignoring wildcards
@@ -62,4 +62,9 @@ complete -o "nospace" -W "Contacts Calendar Dock Finder Mail Safari iTunes Syste
 # Source NVM
 if which brew > /dev/null && [ -f `brew --prefix`/opt/nvm/nvm.sh ]; then
     source `brew --prefix`/opt/nvm/nvm.sh
+fi;
+
+# Init rbenv if it exists
+if which rbenv &> /dev/null; then
+    eval "$(rbenv init -)"
 fi;
