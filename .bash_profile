@@ -68,5 +68,6 @@ fi;
 
 # Init rbenv if it exists
 if which rbenv &> /dev/null; then
+    echo 'Initializing rbenv'
     eval "$(rbenv init -)"
 fi;
