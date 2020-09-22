@@ -72,3 +72,6 @@ export PATH="$HOME/gems/bin:$PATH"
 # Java
 export PATH="/usr/local/opt/openjdk/bin:$PATH"
 export CPPFLAGS="-I/usr/local/opt/openjdk/include $CPPFLAGS"
+
+# .NET Tools
+export PATH="$PATH:/Users/bitbear/.dotnet/tools"
