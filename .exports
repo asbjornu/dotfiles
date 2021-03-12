@@ -79,4 +79,7 @@ export CPPFLAGS="-I/usr/local/opt/openjdk/include $CPPFLAGS"
 export PATH="$PATH:/Users/bitbear/.dotnet/tools"
 
 # GNU sed
-PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"
+export PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"
+
+# .NET
+export DOTNET_ROOT="/usr/local/opt/dotnet/libexec"
