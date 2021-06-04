@@ -86,3 +86,6 @@ export PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"
 
 # .NET
 export DOTNET_ROOT="/usr/local/opt/dotnet/libexec"
+
+# Deno
+export PATH="/Users/bitbear/.deno/bin:$PATH"
