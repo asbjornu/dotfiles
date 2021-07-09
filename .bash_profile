@@ -61,9 +61,10 @@ complete -W "NSGlobalDomain" defaults;
 # Add `killall` tab completion for common apps
 complete -o "nospace" -W "Contacts Calendar Dock Finder Mail Safari iTunes SystemUIServer Terminal Twitter" killall;
 
-# Source NVM
+# Source NVM if it exists
 if which brew > /dev/null && [ -f `brew --prefix`/opt/nvm/nvm.sh ]; then
-    source `brew --prefix`/opt/nvm/nvm.sh
+  [ -s "$(brew --prefix)/opt/nvm/nvm.sh" ] && . "$(brew --prefix)/opt/nvm/nvm.sh"  # This loads nvm
+  [ -s "$(brew --prefix)/opt/nvm/etc/bash_completion.d/nvm" ] && . "$(brew --prefix)/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
 fi;
 
 # Init rbenv if it exists
