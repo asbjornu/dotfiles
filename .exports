@@ -71,6 +71,7 @@ export PATH="$GOPATH/bin:$PATH"
 export PATH="/usr/local/opt/ruby@2.7/bin:$PATH"
 export LDFLAGS="-L/usr/local/opt/ruby@2.7/lib"
 export CPPFLAGS="-I/usr/local/opt/ruby@2.7/include"
+
 # RVM does not like GEM_HOME
 # export GEM_HOME="$HOME/gems"
 # export PATH="$HOME/gems/bin:$PATH"
@@ -80,7 +81,7 @@ export PATH="/usr/local/opt/openjdk/bin:$PATH"
 export CPPFLAGS="-I/usr/local/opt/openjdk/include $CPPFLAGS"
 
 # .NET Tools
-export PATH="$PATH:/Users/bitbear/.dotnet/tools"
+export PATH="$PATH:$HOME/.dotnet/tools"
 
 # GNU sed
 export PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"
@@ -89,4 +90,7 @@ export PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"
 export DOTNET_ROOT="/usr/local/opt/dotnet/libexec"
 
 # Deno
-export PATH="/Users/bitbear/.deno/bin:$PATH"
+export PATH="$HOME/.deno/bin:$PATH"
+
+# RVM
+export PATH="$HOME/.rvm/bin:$PATH"
