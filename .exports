@@ -77,6 +77,7 @@ export PATH="$HOME/gems/bin:$PATH"
 # Java
 export PATH="/usr/local/opt/openjdk/bin:$PATH"
 export CPPFLAGS="-I/usr/local/opt/openjdk/include $CPPFLAGS"
+export JAVA_HOME="/Library/Java/Home"
 
 # .NET Tools
 export PATH="$PATH:$HOME/.dotnet/tools"
