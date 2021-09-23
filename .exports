@@ -60,8 +60,20 @@ export PATH="/usr/local/opt/openssl/bin:$PATH"
 export LDFLAGS="-L/usr/local/opt/openssl/lib"
 export CPPFLAGS="-I/usr/local/opt/openssl/include"
 
-# Grep
+# GNU Grep
 export PATH="/usr/local/opt/grep/libexec/gnubin:$PATH"
+
+# GNU TAR
+export PATH="/usr/local/opt/gnu-tar/libexec/gnubin:$PATH"
+
+# GNU Indent
+export PATH="/usr/local/opt/gnu-indent/libexec/gnubin:$PATH"
+
+# GNU getopt
+export PATH="/usr/local/opt/gnu-getopt/bin:$PATH"
+
+# GNU find
+export PATH="/usr/local/opt/findutils/libexec/gnubin:$PATH"
 
 # Go
 export GOPATH="$HOME/go"

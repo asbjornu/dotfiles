@@ -41,6 +41,11 @@ if which brew > /dev/null && [ -f `brew --prefix`/etc/bash_completion.d/git-comp
     source `brew --prefix`/etc/bash_completion.d/git-completion.bash;
 fi;
 
+# Add tab completion for GNU getopt
+if which brew > /dev/null && [ -f `brew --prefix`/opt/gnu-getopt/etc/bash_completion.d/getopt ]; then
+    source `brew --prefix`/opt/gnu-getopt/etc/bash_completion.d/getopt;
+fi;
+
 # Enable tab completion for `g` by marking it as an alias for `git`
 if type _git &> /dev/null && [ -f `brew --prefix`/etc/bash_completion.d/git-completion.bash ]; then
     complete -o default -o nospace -F _git g;
