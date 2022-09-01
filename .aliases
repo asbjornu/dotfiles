@@ -144,12 +144,6 @@ alias afk="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resource
 # Reload the shell (i.e. invoke as a login shell)
 alias reload="exec ${SHELL} -l"
 
-# To avoid the 'GREP_OPTIONS is deprecated; please use an alias or script' warning
-if [ -f "/usr/local/opt/grep/libexec/gnubin/grep" ]; then
-	alias grep="/usr/local/opt/grep/libexec/gnubin/grep $GREP_OPTIONS"
-	unset GREP_OPTIONS
-fi
-
 # Print each PATH entry on a separate line
 alias path='echo -e ${PATH//:/\\n}'
 

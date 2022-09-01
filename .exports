@@ -36,9 +36,6 @@ export GPG_TTY=$(tty);
 # Hide the “default interactive shell is now zsh” warning on macOS.
 export BASH_SILENCE_DEPRECATION_WARNING=1;
 
-# Always enable colored `grep` output.
-export GREP_OPTIONS='--color=auto';
-
 # Asbjørn Ulsberg's old and custom exports
 export PATH="~/Library/Python/2.7/bin:$HOME/.rbenv/shims:/usr/local/opt/ruby/bin:/usr/local/bin:/usr/local/sbin:/opt/local/bin:/opt/local/sbin:/usr/bin:/Library/TeX/texbin:$PATH";
 export MANPATH=/opt/local/share/man:$MANPATH;
