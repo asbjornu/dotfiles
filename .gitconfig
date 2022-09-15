@@ -69,10 +69,6 @@
     # Show the user email for the current repository.
 	whoami = config user.email
 
-    undo = "!f() { \
-        git reset --hard $(git rev-parse --abbrev-ref HEAD)@{${1-1}}; \
-    }; f"
-
 [apply]
 
     # Detect whitespace errors when applying a patch.
