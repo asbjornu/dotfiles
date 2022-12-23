@@ -232,3 +232,17 @@ function ai2svg() {
 	svgcleaner $svg $svg
   done
 }
+
+# Lists all processes listening to TCP on the optionally specified port
+function listening() {
+  if [ $# -eq 0 ]; then
+    sudo lsof -iTCP -sTCP:LISTEN -n -P
+  elif [ $# -eq 1 ]; then
+    sudo lsof -iTCP -sTCP:LISTEN -n -P | grep -i --color "$1"
+  else
+    echo "Lists all processes listening to TCP on the optionally specified port."
+    echo ""
+    echo "    Usage: listening [port-number]"
+    echo "  Example: listening 80"
+  fi
+}

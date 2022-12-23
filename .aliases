@@ -158,8 +158,6 @@ alias shrug="echo '¯\_(ツ)_/¯' | pbcopy && pbpaste && echo"
 
 alias gv="gitversion | pjson"
 
-alias listening="lsof -iTCP -sTCP:LISTEN -n -P"
-
 alias plantumlserver="docker run -d -p 8080:8080 plantuml/plantuml-server:jetty"
 
 alias pip=pip3
