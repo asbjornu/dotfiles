@@ -37,7 +37,8 @@ export GPG_TTY=$(tty);
 export BASH_SILENCE_DEPRECATION_WARNING=1;
 
 # Asbjørn Ulsberg's old and custom exports
-export PATH="~/Library/Python/2.7/bin:$HOME/.rbenv/shims:/usr/local/opt/ruby/bin:/usr/local/bin:/usr/local/sbin:/opt/local/bin:/opt/local/sbin:/usr/bin:/Library/TeX/texbin:$PATH";
+export PATH="$HOME/Library/Python/2.7/bin:/usr/local/opt/ruby/bin:/usr/local/bin:/usr/local/sbin:/opt/local/bin:/opt/local/sbin:/usr/bin:/Library/TeX/texbin:$PATH";
+#export PATH="$HOME/.rbenv/shims:$PATH";
 export MANPATH=/opt/local/share/man:$MANPATH;
 export CLICOLOR=1;
 export LSCOLORS=gxfxcxdxbxaxhdxxbhgaga;
@@ -77,9 +78,9 @@ export GOPATH="$HOME/go"
 export PATH="$GOPATH/bin:$PATH"
 
 # Ruby
-export PATH="/usr/local/opt/ruby@2.7/bin:$PATH"
-export LDFLAGS="-L/usr/local/opt/ruby@2.7/lib"
-export CPPFLAGS="-I/usr/local/opt/ruby@2.7/include"
+# export PATH="/usr/local/opt/ruby@2.7/bin:$PATH"
+# export LDFLAGS="-L/usr/local/opt/ruby@2.7/lib"
+# export CPPFLAGS="-I/usr/local/opt/ruby@2.7/include"
 export GEM_HOME="$HOME/gems"
 export PATH="$HOME/gems/bin:$PATH"
 
