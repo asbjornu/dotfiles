@@ -42,7 +42,7 @@ if which brew &> /dev/null; then
 fi
 
 # Asbjørn Ulsberg's old and custom exports
-export PATH="$HOME/Library/Python/2.7/bin:$PREFIX/ruby/bin:/usr/local/bin:/usr/local/sbin:/opt/local/bin:/opt/local/sbin:/usr/bin:/Library/TeX/texbin:$PATH";
+export PATH="$HOME/Library/Python/2.7/bin:$PREFIX/opt/ruby/bin:/usr/local/bin:/usr/local/sbin:/opt/local/bin:/opt/local/sbin:/usr/bin:/Library/TeX/texbin:$PATH";
 #export PATH="$HOME/.rbenv/shims:$PATH";
 export MANPATH=/opt/local/share/man:$MANPATH;
 export CLICOLOR=1;
