@@ -36,8 +36,13 @@ export GPG_TTY=$(tty);
 # Hide the “default interactive shell is now zsh” warning on macOS.
 export BASH_SILENCE_DEPRECATION_WARNING=1;
 
+PREFIX="/usr/local/opt/"
+if which brew &> /dev/null; then
+  PREFIX=$(brew --prefix)
+fi
+
 # Asbjørn Ulsberg's old and custom exports
-export PATH="$HOME/Library/Python/2.7/bin:/usr/local/opt/ruby/bin:/usr/local/bin:/usr/local/sbin:/opt/local/bin:/opt/local/sbin:/usr/bin:/Library/TeX/texbin:$PATH";
+export PATH="$HOME/Library/Python/2.7/bin:$PREFIX/ruby/bin:/usr/local/bin:/usr/local/sbin:/opt/local/bin:/opt/local/sbin:/usr/bin:/Library/TeX/texbin:$PATH";
 #export PATH="$HOME/.rbenv/shims:$PATH";
 export MANPATH=/opt/local/share/man:$MANPATH;
 export CLICOLOR=1;
@@ -54,49 +59,49 @@ export GPG_TTY
 export NVM_DIR="$HOME/.nvm"
 
 # OpenSSL
-export PATH="/usr/local/opt/openssl/bin:$PATH"
-export LDFLAGS="-L/usr/local/opt/openssl/lib"
-export CPPFLAGS="-I/usr/local/opt/openssl/include"
+export PATH="$PREFIX/openssl/bin:$PATH"
+export LDFLAGS="-L$PREFIX/openssl/lib"
+export CPPFLAGS="-I$PREFIX/openssl/include"
 
 # GNU Grep
-export PATH="/usr/local/opt/grep/libexec/gnubin:$PATH"
+export PATH="$PREFIX/grep/libexec/gnubin:$PATH"
 
 # GNU TAR
-export PATH="/usr/local/opt/gnu-tar/libexec/gnubin:$PATH"
+export PATH="$PREFIX/gnu-tar/libexec/gnubin:$PATH"
 
 # GNU Indent
-export PATH="/usr/local/opt/gnu-indent/libexec/gnubin:$PATH"
+export PATH="$PREFIX/gnu-indent/libexec/gnubin:$PATH"
 
 # GNU getopt
-export PATH="/usr/local/opt/gnu-getopt/bin:$PATH"
+export PATH="$PREFIX/gnu-getopt/bin:$PATH"
 
 # GNU find
-export PATH="/usr/local/opt/findutils/libexec/gnubin:$PATH"
+export PATH="$PREFIX/findutils/libexec/gnubin:$PATH"
 
 # Go
 export GOPATH="$HOME/go"
 export PATH="$GOPATH/bin:$PATH"
 
 # Ruby
-# export PATH="/usr/local/opt/ruby@2.7/bin:$PATH"
-# export LDFLAGS="-L/usr/local/opt/ruby@2.7/lib"
-# export CPPFLAGS="-I/usr/local/opt/ruby@2.7/include"
+# export PATH="$PREFIX/ruby@2.7/bin:$PATH"
+# export LDFLAGS="-L$PREFIX/ruby@2.7/lib"
+# export CPPFLAGS="-I$PREFIX/ruby@2.7/include"
 export GEM_HOME="$HOME/gems"
 export PATH="$HOME/gems/bin:$PATH"
 
 # Java
-export PATH="/usr/local/opt/openjdk/bin:$PATH"
-export CPPFLAGS="-I/usr/local/opt/openjdk/include $CPPFLAGS"
+export PATH="$PREFIX/openjdk/bin:$PATH"
+export CPPFLAGS="-I$PREFIX/openjdk/include $CPPFLAGS"
 export JAVA_HOME="/Library/Java/Home"
 
 # .NET Tools
 export PATH="$PATH:$HOME/.dotnet/tools"
 
 # GNU sed
-export PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"
+export PATH="$PREFIX/gnu-sed/libexec/gnubin:$PATH"
 
 # .NET
-export DOTNET_ROOT="/usr/local/opt/dotnet/libexec"
+export DOTNET_ROOT="$PREFIX/dotnet/libexec"
 
 # Deno
 export PATH="$HOME/.deno/bin:$PATH"
