@@ -36,13 +36,8 @@ export GPG_TTY=$(tty);
 # Hide the “default interactive shell is now zsh” warning on macOS.
 export BASH_SILENCE_DEPRECATION_WARNING=1;
 
-PREFIX="/usr/local/opt/"
-if which brew &> /dev/null; then
-  PREFIX=$(brew --prefix)
-fi
-
 # Asbjørn Ulsberg's old and custom exports
-export PATH="$HOME/Library/Python/2.7/bin:$PREFIX/opt/ruby/bin:/usr/local/bin:/usr/local/sbin:/opt/local/bin:/opt/local/sbin:/usr/bin:/Library/TeX/texbin:$PATH";
+export PATH="/usr/local/bin:/usr/local/sbin:/usr/bin:$PATH";
 #export PATH="$HOME/.rbenv/shims:$PATH";
 export MANPATH=/opt/local/share/man:$MANPATH;
 export CLICOLOR=1;
@@ -50,6 +45,13 @@ export LSCOLORS=gxfxcxdxbxaxhdxxbhgaga;
 export SVN_EDITOR=/usr/local/bin/atom;
 export HISTCONTROL=erasedups;
 export HISTSIZE=10000;
+
+# Homebrew
+PREFIX="/usr/local/opt"
+if [ -f /opt/homebrew/bin/brew ]; then
+  PREFIX=$(/opt/homebrew/bin/brew --prefix)
+fi
+export PATH="$PREFIX/bin:$PATH"
 
 # TTY for GPG Agent
 GPG_TTY=$(tty)
@@ -87,7 +89,7 @@ export PATH="$GOPATH/bin:$PATH"
 # export LDFLAGS="-L$PREFIX/ruby@2.7/lib"
 # export CPPFLAGS="-I$PREFIX/ruby@2.7/include"
 export GEM_HOME="$HOME/gems"
-export PATH="$HOME/gems/bin:$PATH"
+export PATH="$PREFIX/opt/ruby/bin:$HOME/gems/bin:$PATH"
 
 # Java
 export PATH="$PREFIX/openjdk/bin:$PATH"

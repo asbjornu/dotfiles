@@ -41,8 +41,8 @@ elif [ -f /etc/bash_completion ]; then
 fi;
 
 # Add tab completion for Git commands
-if which brew > /dev/null && [ -f `brew --prefix`/etc/bash_completion.d/git-completion.bash ]; then
-    source `brew --prefix`/etc/bash_completion.d/git-completion.bash;
+if which brew > /dev/null && [ -f "$(brew --prefix)/etc/bash_completion.d/git-completion.bash" ]; then
+    source "$(brew --prefix)/etc/bash_completion.d/git-completion.bash";
 fi;
 
 # Add tab completion for GNU getopt
