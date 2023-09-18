@@ -107,3 +107,10 @@ export DOTNET_ROOT="$PREFIX/dotnet/libexec"
 
 # Deno
 export PATH="$HOME/.deno/bin:$PATH"
+
+# PNPM
+export PNPM_HOME="/Users/asbjornu/Library/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
