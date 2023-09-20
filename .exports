@@ -47,11 +47,11 @@ export HISTCONTROL=erasedups;
 export HISTSIZE=10000;
 
 # Homebrew
-PREFIX="/usr/local/opt"
+_PREFIX="/usr/local/opt"
 if [ -f /opt/homebrew/bin/brew ]; then
-  PREFIX=$(/opt/homebrew/bin/brew --prefix)
+  _PREFIX=$(/opt/homebrew/bin/brew --prefix)
 fi
-export PATH="$PREFIX/bin:$PATH"
+export PATH="$_PREFIX/bin:$PATH"
 
 # TTY for GPG Agent
 GPG_TTY=$(tty)
@@ -61,49 +61,49 @@ export GPG_TTY
 export NVM_DIR="$HOME/.nvm"
 
 # OpenSSL
-export PATH="$PREFIX/openssl/bin:$PATH"
-export LDFLAGS="-L$PREFIX/openssl/lib"
-export CPPFLAGS="-I$PREFIX/openssl/include"
+export PATH="$_PREFIX/openssl/bin:$PATH"
+export LDFLAGS="-L$_PREFIX/openssl/lib"
+export CPPFLAGS="-I$_PREFIX/openssl/include"
 
 # GNU Grep
-export PATH="$PREFIX/grep/libexec/gnubin:$PATH"
+export PATH="$_PREFIX/grep/libexec/gnubin:$PATH"
 
 # GNU TAR
-export PATH="$PREFIX/gnu-tar/libexec/gnubin:$PATH"
+export PATH="$_PREFIX/gnu-tar/libexec/gnubin:$PATH"
 
 # GNU Indent
-export PATH="$PREFIX/gnu-indent/libexec/gnubin:$PATH"
+export PATH="$_PREFIX/gnu-indent/libexec/gnubin:$PATH"
 
 # GNU getopt
-export PATH="$PREFIX/gnu-getopt/bin:$PATH"
+export PATH="$_PREFIX/gnu-getopt/bin:$PATH"
 
 # GNU find
-export PATH="$PREFIX/findutils/libexec/gnubin:$PATH"
+export PATH="$_PREFIX/findutils/libexec/gnubin:$PATH"
 
 # Go
 export GOPATH="$HOME/go"
 export PATH="$GOPATH/bin:$PATH"
 
 # Ruby
-# export PATH="$PREFIX/ruby@2.7/bin:$PATH"
-# export LDFLAGS="-L$PREFIX/ruby@2.7/lib"
-# export CPPFLAGS="-I$PREFIX/ruby@2.7/include"
+# export PATH="$_PREFIX/ruby@2.7/bin:$PATH"
+# export LDFLAGS="-L$_PREFIX/ruby@2.7/lib"
+# export CPPFLAGS="-I$_PREFIX/ruby@2.7/include"
 export GEM_HOME="$HOME/gems"
-export PATH="$PREFIX/opt/ruby/bin:$HOME/gems/bin:$PATH"
+export PATH="$_PREFIX/opt/ruby/bin:$HOME/gems/bin:$PATH"
 
 # Java
-export PATH="$PREFIX/openjdk/bin:$PATH"
-export CPPFLAGS="-I$PREFIX/openjdk/include $CPPFLAGS"
+export PATH="$_PREFIX/openjdk/bin:$PATH"
+export CPPFLAGS="-I$_PREFIX/openjdk/include $CPPFLAGS"
 export JAVA_HOME="/Library/Java/Home"
 
 # .NET Tools
 export PATH="$PATH:$HOME/.dotnet/tools"
 
 # GNU sed
-export PATH="$PREFIX/gnu-sed/libexec/gnubin:$PATH"
+export PATH="$_PREFIX/gnu-sed/libexec/gnubin:$PATH"
 
 # .NET
-export DOTNET_ROOT="$PREFIX/dotnet/libexec"
+export DOTNET_ROOT="$_PREFIX/dotnet/libexec"
 
 # Deno
 export PATH="$HOME/.deno/bin:$PATH"
