@@ -89,7 +89,7 @@ export PATH="$GOPATH/bin:$PATH"
 # export LDFLAGS="-L$_PREFIX/ruby@2.7/lib"
 # export CPPFLAGS="-I$_PREFIX/ruby@2.7/include"
 export GEM_HOME="$HOME/gems"
-export PATH="$_PREFIX/opt/ruby/bin:$HOME/gems/bin:$PATH"
+export PATH="$_PREFIX/ruby/bin:$HOME/gems/bin:$PATH"
 
 # Java
 export PATH="$_PREFIX/openjdk/bin:$PATH"
