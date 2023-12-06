@@ -161,3 +161,6 @@ alias gv="gitversion | pjson"
 alias plantumlserver="docker run -d -p 8080:8080 plantuml/plantuml-server:jetty"
 
 alias pip=pip3
+
+# https://github.com/tuna-f1sh/cyme
+alias lsusb='cyme --lsusb'
