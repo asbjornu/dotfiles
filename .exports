@@ -92,9 +92,14 @@ export GEM_HOME="$HOME/gems"
 export PATH="$_PREFIX/ruby/bin:$HOME/gems/bin:$PATH"
 
 # Java
-export PATH="$_PREFIX/openjdk/bin:$PATH"
-export CPPFLAGS="-I$_PREFIX/openjdk/include $CPPFLAGS"
-export JAVA_HOME="/Library/Java/Home"
+if [ -d "$_PREFIX/openjdk" ]; then
+  JAVA_INSTALL_PATH="$_PREFIX/openjdk"
+elif [ -d "$_PREFIX/opt/openjdk" ]; then
+  JAVA_INSTALL_PATH="$_PREFIX/opt/openjdk"
+fi
+export JAVA_HOME="$JAVA_INSTALL_PATH"
+export PATH="$JAVA_INSTALL_PATH/bin:$PATH"
+export CPPFLAGS="-I$JAVA_INSTALL_PATH/include $CPPFLAGS"
 
 # .NET Tools
 export PATH="$PATH:$HOME/.dotnet/tools"
