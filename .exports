@@ -85,11 +85,18 @@ export GOPATH="$HOME/go"
 export PATH="$GOPATH/bin:$PATH"
 
 # Ruby
-# export PATH="$_PREFIX/ruby@2.7/bin:$PATH"
-# export LDFLAGS="-L$_PREFIX/ruby@2.7/lib"
-# export CPPFLAGS="-I$_PREFIX/ruby@2.7/include"
 export GEM_HOME="$HOME/gems"
-export PATH="$_PREFIX/ruby/bin:$HOME/gems/bin:$PATH"
+
+if [ -d "$_PREFIX/opt/ruby" ]; then
+  RUBY_INSTALL_PATH="$_PREFIX/opt/ruby"
+elif [ -d "$_PREFIX/ruby" ]; then
+  RUBY_INSTALL_PATH="$_PREFIX/ruby"
+fi
+if [ -d "$RUBY_INSTALL_PATH" ]; then
+  export PATH="$RUBY_INSTALL_PATH/bin:$PATH"
+  export LDFLAGS="-L$RUBY_INSTALL_PATH/lib"
+  export CPPFLAGS="-I$RUBY_INSTALL_PATH/include $CPPFLAGS"
+fi
 
 # Java
 if [ -d "$_PREFIX/openjdk" ]; then
@@ -97,9 +104,11 @@ if [ -d "$_PREFIX/openjdk" ]; then
 elif [ -d "$_PREFIX/opt/openjdk" ]; then
   JAVA_INSTALL_PATH="$_PREFIX/opt/openjdk"
 fi
-export JAVA_HOME="$JAVA_INSTALL_PATH"
-export PATH="$JAVA_INSTALL_PATH/bin:$PATH"
-export CPPFLAGS="-I$JAVA_INSTALL_PATH/include $CPPFLAGS"
+if [ -d "$JAVA_INSTALL_PATH" ]; then
+  export JAVA_HOME="$JAVA_INSTALL_PATH"
+  export PATH="$JAVA_INSTALL_PATH/bin:$PATH"
+  export CPPFLAGS="-I$JAVA_INSTALL_PATH/include $CPPFLAGS"
+fi
 
 # .NET Tools
 export PATH="$PATH:$HOME/.dotnet/tools"
