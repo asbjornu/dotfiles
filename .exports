@@ -94,7 +94,7 @@ elif [ -d "$_PREFIX/ruby" ]; then
 fi
 if [ -d "$RUBY_INSTALL_PATH" ]; then
   export PATH="$RUBY_INSTALL_PATH/bin:$PATH"
-  export LDFLAGS="-L$RUBY_INSTALL_PATH/lib"
+  export LDFLAGS="-L$RUBY_INSTALL_PATH/lib $LDFLAGS"
   export CPPFLAGS="-I$RUBY_INSTALL_PATH/include $CPPFLAGS"
 fi
 
@@ -128,3 +128,15 @@ case ":$PATH:" in
   *":$PNPM_HOME:"*) ;;
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
+
+# curl
+if [ -d "$_PREFIX/curl" ]; then
+  CURL_INSTALL_PATH="$_PREFIX/curl"
+elif [ -d "$_PREFIX/opt/curl" ]; then
+  CURL_INSTALL_PATH="$_PREFIX/opt/curl"
+fi
+if [ -d "$CURL_INSTALL_PATH" ]; then
+  export PATH="$CURL_INSTALL_PATH/bin:$PATH"
+  export LDFLAGS="-L$CURL_INSTALL_PATH/lib $LDFLAGS"
+  export CPPFLAGS="-I$CURL_INSTALL_PATH/include $CPPFLAGS"
+fi
