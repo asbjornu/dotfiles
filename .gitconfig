@@ -19,15 +19,15 @@
     c = clone --recursive
 
     # Commit all changes.
-    ca = !git add -A && git commit -av
+    ca = !git add ':(exclude,attr:builtin_objectmode=160000)' && git commit -av
 
     # Switch to a branch, creating it if necessary.
     go = "!f() { git checkout -b \"$1\" 2> /dev/null || git checkout \"$1\"; }; f"
 
     # Show verbose output about tags, branches or remotes.
     tags = tag -l
-    branches = branch -a
-    remotes = remote -v
+    branches = branch --all
+    remotes = remote --verbose
 
 	# List aliases.
     aliases = config --get-regexp alias
